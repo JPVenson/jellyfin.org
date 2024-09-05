@@ -73,7 +73,7 @@ You must now upload the created file, in this case `/temp/dotMemoryclt/workspace
 
 The docker process is essentially the same as the linux barebones, plus you need to install `ps` every time and you need to pull the result file from the container.
 
-First you need to figure out the ID of your jellyfin process by running 
+First you need to figure out the ID of your jellyfin process by running:
 
 ```sh
 docker ps
