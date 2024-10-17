@@ -92,7 +92,7 @@ Note the `CONTAINER ID` and then attach your current console to that container v
 docker exec -it {CONTAINERID} sh
 ```
 
-For example: `docker exec -it 31e5d4f30c8b sh`. Then follow all the steps from the Linux Barebones guide above. After that you might want to transfer the result file back to your host, assuming the same result file from the above example you can do that on your host by calling:
+For example: `docker exec -it 31e5d4f30c8b sh`. Then follow all the steps from the [Linux Barebones guide](/docs/general/administration/troubleshooting/memory-dumping.md#linux-barebones) above. After that you might want to transfer the result file back to your host, assuming the same result file from the above example you can do that on your host by calling:
 
 ```ps
 docker cp {CONTAINERID}:/temp/dotMemoryclt/workspaces/[1]-jellyfin.2024-09-05T06-27-14.471.dmw /opt/[1]-jellyfin.2024-09-05T06-27-14.471.dmw
