@@ -907,5 +907,75 @@ export const Clients: Array<Client> = [
         url: 'https://streamyfin.app'
       }
     ]
+  },
+  {
+    id: 'manet',
+    name: 'Manet',
+    description: 'A third-party music client for iOS',
+    clientType: ClientType.ThirdParty,
+    deviceTypes: [DeviceType.Mobile],
+    licenseType: LicenseType.Proprietary,
+    platforms: [Platform.IOS],
+    primaryLinks: [
+      {
+        id: 'app-store',
+        name: 'App Store',
+        url: 'https://apps.apple.com/us/app/manet-music/id6470928235'
+      }
+    ],
+    secondaryLinks: [
+      {
+        id: 'website',
+        name: 'Website',
+        url: 'https://tilo.dev/manet/'
+      }
+    ]
+  },
+  {
+    id: "fladder",
+    name: "Fladder",
+    description: "A simple, cross-platform Jellyfin frontend built on top of Flutter.",
+    clientType: ClientType.ThirdParty,
+    deviceTypes: [DeviceType.Mobile, DeviceType.Desktop],
+    licenseType: LicenseType.OpenSource,
+    platforms: [Platform.Linux, Platform.Windows, Platform.MacOS, Platform.Android, Platform.Browser],
+    primaryLinks: [
+      {
+        id: "play-store",
+        name: "Play Store",
+        url: "https://play.google.com/store/apps/details?id=nl.jknaapen.fladder",
+      },
+    ],
+    secondaryLinks: [
+      {
+        id: "github",
+        name: "GitHub",
+        url: "https://github.com/DonutWare/Fladder",
+      },
+    ],
+  },
+  {
+    id: 'symfonium',
+    name: 'Symfonium',
+    description:
+      'An offline-first third-party music player that enhances your Jellyfin experience with streaming, syncing and full personalization',
+    clientType: ClientType.ThirdParty,
+    deviceTypes: [DeviceType.Mobile],
+    licenseType: LicenseType.Proprietary,
+    platforms: [Platform.Android],
+    primaryLinks: [
+      {
+        id: 'play-store',
+        name: 'Play Store',
+        url: 'https://play.google.com/store/apps/details?id=app.symfonik.music.player'
+      }
+    ],
+    secondaryLinks: [
+      {
+        id: 'website',
+        name: 'Website',
+        url: 'https://symfonium.app/'
+      }
+    ]
   }
 ];

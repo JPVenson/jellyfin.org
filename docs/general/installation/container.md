@@ -16,7 +16,7 @@ LinuxServer.io image: `linuxserver/jellyfin` <a href="https://hub.docker.com/r/l
 hotio image: `hotio/jellyfin` <a href="https://hub.docker.com/r/hotio/jellyfin"><img alt="Docker Pull Count" src="https://img.shields.io/docker/pulls/hotio/jellyfin.svg" /></a>.
 
 Jellyfin distributes [official container images on Docker Hub](https://hub.docker.com/r/jellyfin/jellyfin/) for multiple architectures.
-These images are based on Debian and [built directly from the Jellyfin source code](https://github.com/jellyfin/jellyfin/blob/master/Dockerfile).
+These images are based on Debian and [built directly from the Jellyfin source code](https://github.com/jellyfin/jellyfin-packaging/blob/master/docker/Dockerfile).
 
 Additionally, there are several third parties providing unofficial container images, including the [LinuxServer.io](https://www.linuxserver.io/) ([Dockerfile](https://github.com/linuxserver/docker-jellyfin/blob/master/Dockerfile)) project and [hotio](https://github.com/hotio) ([Dockerfile](https://github.com/hotio/jellyfin/blob/release/linux-amd64.Dockerfile)), which offer images based on Ubuntu and the official Jellyfin Ubuntu binary packages.
 
@@ -310,29 +310,3 @@ SuccessExitStatus=0 143
 # Start by default on boot
 WantedBy=default.target
 ```
-
-## TrueNAS SCALE / TrueCharts
-
-Jellyfin is available as a [TrueNAS SCALE](https://www.truenas.org/) App inside the [TrueCharts](https://www.truecharts.org/) App Catalog with direct integration into the GUI, no CLI needed. Direct support is available on the [TrueCharts Discord](https://discord.gg/tVsPTHWTtr) and the source code is available on [GitHub](https://github.com/truecharts/charts).
-
-1. Install the TrueCharts Catalog to TrueNAS SCALE, see [website](https://truecharts.org/manual/SCALE/guides/getting-started/#adding-truecharts) for more info.
-
-   1. Go to Apps page from the top level SCALE menu
-   2. Select Manage Catalogs tab on the Apps page
-   3. Click Add Catalog
-   4. After reading the iXsystems notice, click Continue and enter the required information:
-      Name: truecharts
-      Repository: `https://github.com/truecharts/catalog`
-      Preferred Trains: `enterprise` and `stable`
-      Branch: main
-   5. Click Save and allow SCALE to refresh its catalog with TrueCharts (this may take a few minutes)
-
-2. Click `Available Applications` and search for `Jellyfin`
-
-3. Click `Install`, which will take you to the GUI Wizard and you'll be able to fill out the necessary info
-
-   - Server URL to publish in UDP Auto Discovery response.
-   - Networking, Ingress (Reverse Proxy), Security Options
-   - Adding Storage (for media folders) is also a standalone guide available in the [TrueCharts documentation](https://truecharts.org/manual/SCALE/guides/add-storage/). For Jellyfin the recommendation is to add storage as `Additional App Storage`
-
-4. Click Save and once it's up and running you'll be able to click Open to access `Jellyfin`.
